@@ -22,6 +22,7 @@ env/
 
 # Ignore datasets folder (optional: if you store all raw data here)
 datasets/
+Datasets/
 submissions/
 
 # Ignore Kaggle API key
