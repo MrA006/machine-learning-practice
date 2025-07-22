@@ -21,7 +21,7 @@ env/
 *.rar
 
 # Ignore datasets folder (optional: if you store all raw data here)
-datasets/
+# datasets/
 Datasets/
 submissions/
 
