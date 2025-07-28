@@ -1,31 +1,33 @@
 #!/usr/bin/env bash
-# track_large_lfs.sh
-# Finds untracked files >10MB and adds them to Git LFS.
+# track_all_large_lfs.sh
+# Finds every file >10 MB and makes sure it’s tracked by Git LFS.
 
-# Size threshold (in bytes): 10 * 1024 * 1024 = 10 485 760
 THRESHOLD=$((10 * 1024 * 1024))
 
-echo "🔍 Scanning for untracked files >10 MB…"
-files_found=0
+echo "🔍 Scanning for ALL files >10 MB…"
+found=0
 
-# List untracked files, filter by size, track & add via LFS
-git ls-files --others --exclude-standard | while read -r file; do
-  if [ -f "$file" ]; then
-    size=$(stat -c%s "$file")
-    if [ "$size" -gt "$THRESHOLD" ]; then
-      echo "  ➡️  Tracking with LFS: $file ($(printf '%.1f' "$(bc -l <<<"$size/1024/1024")") MB)"
-      git lfs track "$file"
-      git add "$file"
-      files_found=$((files_found + 1))
-    fi
+# Use find to get every file >THRESHOLD, skip .git folder
+find . -type f -size +"${THRESHOLD}"c -not -path './.git/*' | while read -r f; do
+  # strip leading './'
+  file="${f#./}"
+
+  # Check if already in LFS (by path in .gitattributes)
+  if git lfs ls-files | awk '{print $2}' | grep -Fxq "$file"; then
+    echo "   ✔ already LFS-tracked: $file"
+  else
+    echo "   ➡️  adding to LFS:         $file"
+    git lfs track "$file"
+    git add "$file"
+    found=$((found+1))
   fi
 done
 
-if [ "$files_found" -gt 0 ]; then
-  echo "📝 Staging .gitattributes…"
+if (( found > 0 )); then
+  echo "📝 Staging updated .gitattributes…"
   git add .gitattributes
-  echo "✅ Done! $files_found file(s) staged for LFS."
-  echo "Next: git commit -m \"Track large files with LFS\" && git push"
+  echo "✅ Done: $found new file(s) staged under LFS."
+  echo "Next: git commit -m \"Track all >10MB files with LFS\" && git push"
 else
-  echo "✅ No untracked files >10 MB found."
+  echo "✅ All >10MB files are already tracked by LFS."
 fi
