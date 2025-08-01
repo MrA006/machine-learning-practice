@@ -12,3 +12,5 @@ Specialisation[[:space:]]Course/Course[[:space:]]4/week\#4_coding_Assignments/Fi
 Specialisation[[:space:]]Course/Course[[:space:]]4/week\#4_coding_Assignments/Files/home/jovyan/work/W4A1/datasets/train_face.h5 filter=lfs diff=lfs merge=lfs -text
 Specialisation[[:space:]]Course/Course[[:space:]]4/week\#4_coding_Assignments/Files/home/jovyan/work/W4A1/nn4.small2.v7.h5 filter=lfs diff=lfs merge=lfs -text
 Specialisation[[:space:]]Course/Course[[:space:]]4/week\#4_coding_Assignments/Files/home/jovyan/work/W4A1/keras-facenet_tf23/variables/variables.data-00000-of-00001 filter=lfs diff=lfs merge=lfs -text
+Specialisation[[:space:]]Course/Course[[:space:]]4/week\#4_coding_Assignments/Files/home/jovyan/work/W4A2/pretrained-model/imagenet-vgg-verydeep-19.mat filter=lfs diff=lfs merge=lfs -text
+Specialisation[[:space:]]Course/Course[[:space:]]4/week\#4_coding_Assignments/Files/home/jovyan/work/W4A2/pretrained-model/vgg19_weights_tf_dim_ordering_tf_kernels_notop.h5 filter=lfs diff=lfs merge=lfs -text
