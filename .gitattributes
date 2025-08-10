@@ -17,3 +17,4 @@ Specialisation[[:space:]]Course/Course[[:space:]]4/week\#4_coding_Assignments/Fi
 Specialisation[[:space:]]Course/Course[[:space:]]5/Files/home/jovyan/work/W1A3/data/training_example.wav filter=lfs diff=lfs merge=lfs -text
 Specialisation[[:space:]]Course/Course[[:space:]]5/Files/home/jovyan/work/W1A3/data/training_example.mp3 filter=lfs diff=lfs merge=lfs -text
 Specialisation[[:space:]]Course/Course[[:space:]]5/Files/home/jovyan/work/W2A1/data/glove.6B.50d.txt filter=lfs diff=lfs merge=lfs -text
+Specialisation[[:space:]]Course/Course[[:space:]]5/Files/home/jovyan/work/W2A2/data/glove.6B.50d.txt filter=lfs diff=lfs merge=lfs -text
