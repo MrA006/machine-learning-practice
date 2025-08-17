@@ -18,3 +18,5 @@ Specialisation[[:space:]]Course/Course[[:space:]]5/Files/home/jovyan/work/W1A3/d
 Specialisation[[:space:]]Course/Course[[:space:]]5/Files/home/jovyan/work/W1A3/data/training_example.mp3 filter=lfs diff=lfs merge=lfs -text
 Specialisation[[:space:]]Course/Course[[:space:]]5/Files/home/jovyan/work/W2A1/data/glove.6B.50d.txt filter=lfs diff=lfs merge=lfs -text
 Specialisation[[:space:]]Course/Course[[:space:]]5/Files/home/jovyan/work/W2A2/data/glove.6B.50d.txt filter=lfs diff=lfs merge=lfs -text
+Specialisation[[:space:]]Course/Course[[:space:]]5/Files/home/jovyan/work/W3A2/XY_train/X.npy filter=lfs diff=lfs merge=lfs -text
+Specialisation[[:space:]]Course/Course[[:space:]]5/Files/home/jovyan/work/W3A2/XY_dev/X_dev.npy filter=lfs diff=lfs merge=lfs -text
